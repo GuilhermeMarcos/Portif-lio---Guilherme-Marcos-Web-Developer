@@ -51,26 +51,19 @@ button { font-family: inherit; }
 .delay-4 { animation-delay: 0.44s; }
 .delay-5 { animation-delay: 0.57s; }
 
-.stripe-card { background-image: repeating-linear-gradient(135deg, #0b0f17, #0b0f17 10px, #0d1119 10px, #0d1119 20px); }
-
 .btn-primary { background: linear-gradient(135deg, #4f8cff, #2f6fed); color: #05070c; transition: transform 0.15s ease, filter 0.15s ease; }
 .btn-primary:hover { filter: brightness(1.1); transform: translateY(-2px); }
 .btn-secondary { border: 1px solid #2a3444; color: #eef2f7; transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease; }
 .btn-secondary:hover { border-color: #4f8cff; color: #7ab8ff; transform: translateY(-2px); }
 
-.btn-cta-gradient { background: linear-gradient(135deg, #4f8cff, #9b8cff); color: #05070c; transition: transform 0.15s ease, filter 0.15s ease; }
-.btn-cta-gradient:hover { filter: brightness(1.1); transform: translateY(-2px); }
-
 .lang-btn { padding: 6px 10px; border-radius: 6px; border: 1px solid #3a4558; color: #3a4558; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; transition: color 0.2s ease, border-color 0.2s ease; cursor: pointer; background: transparent; }
 .lang-btn.active { border-color: #4f8cff; color: #4f8cff; }
 .lang-btn:hover { color: #7ab8ff !important; border-color: #7ab8ff !important; }
 
-.feature-card, .quote-card, .project-card { transition: border-color 0.2s ease, transform 0.2s ease; }
-.feature-card:hover, .project-card:hover { border-color: #2f6fed; transform: translateY(-4px); }
-.quote-card:hover { border-color: #2a3444; }
-
-.service-card { transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease; }
-.service-card:hover { border-color: #4f8cff; transform: translateY(-6px); box-shadow: 0 16px 40px rgba(79,140,255,0.18); }
+.project-card { transition: border-color 0.2s ease, transform 0.2s ease; }
+.project-card:hover { border-color: #2f6fed; transform: translateY(-4px); }
+.project-card img { filter: blur(6px); transition: filter 0.4s ease; }
+.project-card:hover img { filter: blur(0); }
 
 .step-line summary { list-style: none; cursor: pointer; }
 .step-line summary::-webkit-details-marker { display: none; }
@@ -91,11 +84,7 @@ button { font-family: inherit; }
 .step-line[open] .step-toggle-green { background: linear-gradient(135deg, #5dcaa5, #2f9e7d); box-shadow: 0 8px 22px rgba(93,202,165,0.4); }
 .step-line[open] .step-toggle-green svg { stroke: #05070c; }
 
-.project-card img { filter: blur(6px); transition: filter 0.4s ease; }
-.project-card:hover img { filter: blur(0); }
-
 .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 
 .marquee-track { display: flex; width: max-content; animation: scroll-left 22s linear infinite; }
 @keyframes scroll-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -105,7 +94,6 @@ button { font-family: inherit; }
 
 @media (max-width: 860px) {
   .grid-3 { grid-template-columns: 1fr; }
-  .grid-2 { grid-template-columns: 1fr; }
   .hero-title { font-size: 50px !important; letter-spacing: -1.5px !important; }
   .hero-ctas { flex-direction: column !important; align-items: stretch !important; }
   .section-pad { padding-left: 24px !important; padding-right: 24px !important; }
